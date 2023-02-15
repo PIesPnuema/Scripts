@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Check if three arguments were provided
+if [ $# -ne 3 ]; then
+  echo "Error: Three arguments are required"
+  exit 1
+fi
+
+# Get the project name, executable name, and target library from the arguments
+project_name=$1
+executable_name=$2
+target_library=$3
+
+# Create the CMakeLists.txt file
+cat > CMakeLists.txt << EOF
+# CMakeLists.txt file for ${project_name}
+
+# Set the minimum required version of CMake
+cmake_minimum_required(VERSION 3.0)
+
+# Project name
+project(${project_name})
+
+# Add an executable to the project
+add_executable(${project_name} ${executable_name})
+
+# Link the target library to the executable
+target_link_libraries(${project_name} ${target_library})
+EOF
+

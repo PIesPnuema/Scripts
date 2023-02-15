@@ -1,0 +1,52 @@
+#! /bin/bash 
+
+# Basic wxWidgets include for finding precompiled libs.
+
+echo " 
+make_minimum_required(VERSION 3.22) 
+project(<target executable>) 
+
+# example of compiler options
+#add_compile_options(\`wx-config --cxxflags --libs\`)
+
+# Compile standards
+set(CMAKE_CXX_STANDARD 11)				# what compiler we need
+set(CMAKE_CXX_STANDARD_REQUIRED True)	# stating that we will require the above
+
+# Creates Variables
+set(SOURCES 
+    \${PROJECT_SOURCE_DIR}/src/<name of executables>)
+
+# Sub directories (need to add, then include to target)
+add_subdirectory(src) # if library is needed.
+add_subdirectory(UnitTest++/src)
+
+# Makes path to headers discoverable to .cpp files
+include_directories(\"\${PROJECT_SOURCE_DIR}/include\")
+
+set(wxWidgets_CONFIG_EXECUTABLE /usr/local/bin/wx-config)
+# link wxWidgets to file. 
+find_package(wxWidgets REQUIRED)
+if (wxWidgets_FOUND)
+	# Include the wxWidgets headers
+	include(\${wxWidgets_USE_FILE})
+
+	# Add an executable to the project
+    add_executable(myFirstWindow main.cpp)
+
+	# Link the wxWidgets libraries to the executable
+	target_link_libraries(myFirstWindow \${wxWidgets_LIBRARIES})
+    # adding libraries targets to project executable.
+    target_link_libraries(<executable> PUBLIC <nameOfTargetLibsInOtherDirectory>)
+
+endif()
+
+# Adding directories to target.
+target_include_directories(<target executable> PUBLIC 
+						\"\${PROJECT_BINARY_DIR}\"
+						\"\${PROJECT_SOURCE_DIR}/src\"
+						\"\${PROJECT_SOURCE_DIR}/UnitTest++/src\")
+
+" > CMakeLists.txt
+
+

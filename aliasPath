@@ -1,0 +1,34 @@
+#!/bin/bash
+
+succeeded=0
+
+if [ $# -eq 0 ]; then
+    path=$(pwd)
+elif [ $# -eq 1 ]; then
+    path=$1
+else
+    echo "Usage: aliasCurrent [<path to current directory>]"
+    exit 1
+fi
+
+# Remove the existing line defining the environment variable
+sed -i "/^export CURR_PROJ_PATH/d" ~/.bash_aliases
+
+# Remove the existing line defining the alias
+sed -i "/^alias current/d" ~/.bash_aliases
+
+# Save the path to the current project
+echo "export CURR_PROJ_PATH=$path" >> ~/.bash_aliases
+
+# Create the alias for the current project
+echo "alias current='pushd \$CURR_PROJ_PATH'" >> ~/.bash_aliases
+
+succeeded=1
+
+if [ $succeeded -eq 1 ]; then
+    # because scripts run in a inactive shell `source ~/.bashrc` does not work
+    # The exec bash starts a new instance of the bash and will do the same thing
+    exec bash
+   
+fi
+

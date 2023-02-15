@@ -1,0 +1,20 @@
+/*
+ *	exception safe grow operation.
+ *	-----------------------------
+ */
+ 
+void growOperation(size_t newSize)
+{
+	T temp = new T[newSize];
+
+	// if copy throws this will not be effected.
+	copy(this.begin(), this.begin() + min(size_, newSize), temp);
+
+	// temp will be destructed once out of scope.
+	swap(this, temp);
+
+	size_ = newSize;	// or below either one works
+	// swap(size_, newSize);
+}
+
+

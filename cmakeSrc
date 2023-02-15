@@ -1,0 +1,16 @@
+#! /bin/bash
+
+echo "
+
+# target name needs to be the name added to target_link_libraries in src 
+# CMakeLists.txt file
+
+add_library(<name for target library> STATIC <name of .cpp files to include>) 
+" > CMakeLists.txt
+
+echo "
+
+## SOURCE FILES FOR PROJECT 
+----
+
+" > README.md
