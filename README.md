@@ -37,5 +37,4 @@ process, as well as enhance the scripts already found in the repo.
 
 ## DOCS
 
-If you have no idea how to configure you system to run these globally the [HOW_TO]() doc should help. 
-
+No idea what your doing? [HOW_TO]() doc should help? Want to know more [docs]() is you place! 
