@@ -1,6 +1,6 @@
 ## SCRIPT REPO  
  
-Sections: [ABOUT](#about) | [GOAL](#goal) | [CONTIBUTION](#contribution) | [DEPENDENCIES](#dependencies) | [ABSOLUTE_BEGINER?](#absolute_beginner?)
+Sections: [ABOUT](#about) | [GOAL](#goal) | [CONTIBUTION](#contribution) | [DEPENDENCIES](#dependencies) | [DOCS](#docs)
 
 ## ABOUT
 
@@ -35,9 +35,7 @@ process, as well as enhance the scripts already found in the repo.
 
 - All C++ build system scripts after 17 Feb 2023 will rely on GoogleTest for unit testing.
 
-## ABSOLUTE_BEGINER?
+## DOCS
 
-see [HOW_TO]() 
-
-
+If you have no idea how to configure you system to run these globally the [HOW_TO]() doc should help. 
 
