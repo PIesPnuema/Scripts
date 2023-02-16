@@ -29,7 +29,7 @@ process, as well as enhance the scripts already found in the repo.
 
 ## DEPENDENCIES
 
-- All C++ build system scripts after 17 Feb 2023 will rely on googletest for unit testing.
+- All C++ build system scripts after 17 Feb 2023 will rely on GoogleTest for unit testing.
 
 
 
