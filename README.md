@@ -1,6 +1,10 @@
-## SCRIPT REPO
+## SCRIPT REPO  
  
-Welcome to The Scripts repo. The code found here will be anything that
+Sections: [ABOUT](#about) | [GOAL](#goal) | [CONTIBUTION](#contribution) | [DEPENDENCIES](#dependencies) | [ABSOLUTE_BEGINER?](#absolute_beginner?)
+
+## ABOUT
+
+The code found here will be anything that
 helps to automate tasks on the command line. 
 
 The repo is not dependent on any particular language. Dependencies may vary 
@@ -30,6 +34,10 @@ process, as well as enhance the scripts already found in the repo.
 ## DEPENDENCIES
 
 - All C++ build system scripts after 17 Feb 2023 will rely on GoogleTest for unit testing.
+
+## ABSOLUTE_BEGINER?
+
+see [HOW_TO]() 
 
 
 
