@@ -37,4 +37,4 @@ process, as well as enhance the scripts already found in the repo.
 
 ## DOCS
 
-No idea what your doing? [HOW_TO]() doc should help? Want to know more [docs]() is you place! 
+No idea what your doing? [HOW_TO]() doc should help? Want to know more [docs]() is your place! 
