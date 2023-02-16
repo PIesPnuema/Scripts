@@ -1,6 +1,8 @@
 /*
  *	exception safe grow operation.
  *	-----------------------------
+ *  this is an example. The Swap will call std::swap on all the data members 
+ *  of that object.
  */
  
 void growOperation(size_t newSize)
@@ -10,11 +12,11 @@ void growOperation(size_t newSize)
 	// if copy throws this will not be effected.
 	copy(this.begin(), this.begin() + min(size_, newSize), temp);
 
-	// temp will be destructed once out of scope.
-	swap(this, temp);
-
-	size_ = newSize;	// or below either one works
-	// swap(size_, newSize);
+	// temp will be destructed once out of scope. Swap be a private member 
+    // fuction that handles the unique needs for the swap. Most likely calling
+    // std::swap inside it for each data member.
+	Swap(this, temp);
+    
 }
 
 
