@@ -1,0 +1,15 @@
+#!/bin/bash
+
+isFoundName=0
+
+for name in "include" "src" "build" "UnitTest++" "CMakeLists.txt" "README.md" ".git" ".gitignore" "googletest"; do
+    if [ -e "./$name" ]; then
+        echo "Cannot deploy build system until This file or directory is deleted: $name"
+        isFoundName=1
+    fi
+done
+
+if [ "$isFoundName" == 1 ]; then
+    exit 1
+fi
+

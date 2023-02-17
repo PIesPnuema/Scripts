@@ -3,6 +3,21 @@
 # hack to be able to execute the cmakeMain, cmakeSrc, cmakeInclude files in only current session.
 export PATH="$PATH:$SCRIPTS_LIB_PATH/cppProject_include"
 
+# ASSERT ----------------------------------------------------------------------
+# Testing the current directory for any other directories or files that match 
+# the ones we are creating here. This is to not override the existing files and
+# loose work
+
+# run assert script
+assert_no_existing_files_or_Dirs
+
+# test assert exit status
+if [ $? -eq 1 ] ; then
+    exit 1
+fi
+
+# -----------------------------------------------------------------------------
+
 # Adding git to project
 git init
 echo "
@@ -18,9 +33,6 @@ echo "
 # UnitTest++/src/*.d
 build/*
 " > .gitignore
-
-# adding unit tests to project
-cp -r $SCRIPTS_LIB_PATH/googletest/ .
 
 # Creating root CMakeLists.txt file
 if [[ "$1" == '-wx' ]]; then
@@ -48,5 +60,13 @@ echo "
 ----
 
 " > README.md
+
+# adding googletest to project
+git clone https://github.com/google/googletest.git -b v1.13.0
+cd googletest        # Main directory of the cloned repository.
+mkdir build          # Create a directory to hold the build output.
+cd build
+cmake ..             # Generate native build scripts for GoogleTest.
+cd ../../
 
 

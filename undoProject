@@ -1,39 +1,45 @@
 #! /bin/bash
 
 # will remove the cppProject command only if the items exist.
+echo "You are about to delete files and directories. Do your wish to continue: y/n? "
+read name
 
-if [ -d "./include" ] ; then
-	rm -rf ./include/
-fi
+for isFound in "y" "Y" "Yes" "yes" "YES" ; do
+    if [ "$name" == "$isFound" ] ; then    
+        if [ -d "./include" ] ; then
+            rm -rf ./include/
+        fi
 
-if [ -d "./src" ] ; then
-    rm -rf ./src/
-fi
+        if [ -d "./src" ] ; then
+            rm -rf ./src/
+        fi
 
-if [ -d "./build" ] ; then
-	rm -rf ./build/
-fi
+        if [ -d "./build" ] ; then
+            rm -rf ./build/
+        fi
 
-if [ -d "./UnitTest++" ] ; then 
-	rm -rf ./UnitTest++/
-fi
+        if [ -d "./UnitTest++" ] ; then 
+            rm -rf ./UnitTest++/
+        fi
 
-if [ -f "./CMakeLists.txt" ] ; then 
-	rm ./CMakeLists.txt 
-fi 
+        if [ -f "./CMakeLists.txt" ] ; then 
+            rm ./CMakeLists.txt 
+        fi 
 
-if [ -f "./README.md" ] ; then 
-	rm ./README.md
-fi
+        if [ -f "./README.md" ] ; then 
+            rm ./README.md
+        fi
 
-if [ -e "./.git" ] ; then 
-	rm -rf ./.git
-fi
+        if [ -e "./.git" ] ; then 
+            rm -rf ./.git
+        fi
 
-if [ -e "./.gitignore" ] ; then 
-	rm -f ./.gitignore
-fi
+        if [ -e "./.gitignore" ] ; then 
+            rm -f ./.gitignore
+        fi
 
-if [ -e"./googletest" ] ; then
-    rm -rf ./googletest/
-fi
+        if [ -e"./googletest" ] ; then
+            rm -rf ./googletest/
+        fi
+    fi
+done
