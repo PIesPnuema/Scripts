@@ -18,8 +18,8 @@ if [ -d "./UnitTest++" ] ; then
 	rm -rf ./UnitTest++/
 fi
 
-if [ -f "./CMakeList.txt" ] ; then 
-	rm ./CMakeList.txt 
+if [ -f "./CMakeLists.txt" ] ; then 
+	rm ./CMakeLists.txt 
 fi 
 
 if [ -f "./README.md" ] ; then 
@@ -34,5 +34,6 @@ if [ -e "./.gitignore" ] ; then
 	rm -f ./.gitignore
 fi
 
-
-
+if [ -e"./googletest" ] ; then
+    rm -rf ./googletest/
+fi

@@ -1,28 +1,29 @@
 #! /bin/bash 
 
+# hack to be able to execute the cmakeMain, cmakeSrc, cmakeInclude files in only current session.
+export PATH="$PATH:$SCRIPTS_LIB_PATH/cppProject_include"
+
 # Adding git to project
 git init
 echo "
-
-# ignore all files except the CMakeList.txt file
-UnitTest++/src/*.cpp
-UnitTest++/src/*.h
-UnitTest++/src/*.o
-UnitTest++/src/cmake-build-debug/*
-UnitTest++/src/Posix/*
-UnitTest++/src/.idea
-UnitTest++/libUnitTest++.a
-UnitTest++/src/tests/*
-UnitTest++/src/*.d
+# ignore all files except the CMakeList.txt file if using UnitTest++ framework.
+# UnitTest++/src/*.cpp
+# UnitTest++/src/*.h
+# UnitTest++/src/*.o
+# UnitTest++/src/cmake-build-debug/*
+# UnitTest++/src/Posix/*
+# UnitTest++/src/.idea
+# UnitTest++/libUnitTest++.a
+# UnitTest++/src/tests/*
+# UnitTest++/src/*.d
 build/*
-
 " > .gitignore
 
 # adding unit tests to project
-cp -r ~/programming/cplusplus/lib/UnitTest++ .
+cp -r ~/programming/cplusplus/lib/googletest/ .
 
 # Creating root CMakeLists.txt file
-if [ $1 = '-wx' ]; then
+if [[ "$1" == '-wx' ]]; then
     cmakeWxWidgets
 else 
     cmakeMain
@@ -43,26 +44,6 @@ cd ..
 
 # Adding README.md to the Root.
 echo " 
-## TODO (iostream hiden from clangd) 
------
-To configure a basic flags for clangd and to allow clangd
-lsp (language server) to find the path to <iostream>
-
-run this command only after you configure cmake to fit the project 
-
-\`\`\`sh
-cd ./build/ && cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 .. && cd ..
-\`\`\`
-
-## TODO (wxWidgets compile option)
------
-If you are using wxWidgets and wish to use the installed version for speed 
-use compiler command
-
-\`\`\`sh
-g++ myfoo.cpp \`wx-config --cxxflags --libs\` -o myfoo 
-\`\`\`
-
 ## PROJECT 
 ----
 
