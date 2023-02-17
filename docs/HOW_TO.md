@@ -1,5 +1,5 @@
 
-Table of contents: [1. EXPORT_COMMAND](#1.) | [.bashrc](#.bashrc) | [3.%20export_command) ENVIRONMENT_VARIABLES](#3.%20environment_variables) | [Why_do_I_care](#why_do_I_care) |
+Table of contents: [1. EXPORT_COMMAND](#1.) | [.bashrc](#.bashrc) | [3. ENVIRONMENT_VARIABLES](#3.%20environment_variables) | [Why_do_I_care](#why_do_I_care) |
 
 ## WELCOME 
 
