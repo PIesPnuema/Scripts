@@ -1,5 +1,5 @@
 
-Table of contents: [EXPORT_COMMAND](#export_command) | [.bashrc](#.bashrc) | [ENVIRONMENT_VARIABLES](#environment_variables) | [Why_do_I_care](#why_do_I_care) |
+Table of contents: [EXPORT_COMMAND](#export_command) | [BASHRC](#bashrc) | [ENVIRONMENT_VARIABLES](#environment_variables) | [Why_do_I_care](#why_do_I_care) |
 
 ## WELCOME 
 
@@ -18,7 +18,7 @@ the export command followed by a variable name and value, you are creating or
 modifying an environment variable that can be accessed by programs running in 
 the current shell environment.
 
-## .bashrc
+## BASHRC
 
 The .bashrc file is a shell script that is run every time you start a new 
 interactive shell session in Bash. It is typically used to configure the 
