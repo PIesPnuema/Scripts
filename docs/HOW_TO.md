@@ -1,5 +1,5 @@
 
-Table of contents: [1. EXPORT_COMMAND](#1.%20export_command) | [2 .bashrc](#2%20.bashrc) | [3. ENVIRONMENT_VARIABLES](#3.%20environment_variables) | [Why_do_I_care](#why_do_I_care) |
+Table of contents: [EXPORT_COMMAND](#export_command) | [.bashrc](#.bashrc) | [ENVIRONMENT_VARIABLES](#environment_variables) | [Why_do_I_care](#why_do_I_care) |
 
 ## WELCOME 
 
@@ -11,14 +11,14 @@ guide on how to use the repo. If you want the quick solution for getting started
 Note this guide is only referring to a Unix/ Linux based system and all the work is done
 on the command line.
 
-## 1. EXPORT_COMMAND
+## EXPORT_COMMAND
 
 In Linux, the export command is used to set environment variables. When you run 
 the export command followed by a variable name and value, you are creating or 
 modifying an environment variable that can be accessed by programs running in 
 the current shell environment.
 
-## 2. .bashrc
+## .bashrc
 
 The .bashrc file is a shell script that is run every time you start a new 
 interactive shell session in Bash. It is typically used to configure the 
@@ -57,7 +57,7 @@ This will apply the changes that you made to the file.
 cp .bashrc .bashrc_backup
 ```
 
-## 3. ENVIRONMENT_VARIABLES
+## ENVIRONMENT_VARIABLES
 
 In Linux, an environment variable is a variable that is set in the shell's environment 
 and can be accessed by processes running in that environment. These variables are 
