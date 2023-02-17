@@ -1,5 +1,5 @@
 
-Table of contents: [1. EXPORT_COMMAND](#1.) | [.bashrc](#.bashrc) | [3. ENVIRONMENT_VARIABLES](#3.%20environment_variables) | [Why_do_I_care](#why_do_I_care) |
+Table of contents: [1. EXPORT_COMMAND](#1.%20export_command) | [2 .bashrc](#2%20.bashrc) | [3. ENVIRONMENT_VARIABLES](#3.%20environment_variables) | [Why_do_I_care](#why_do_I_care) |
 
 ## WELCOME 
 
@@ -57,7 +57,7 @@ This will apply the changes that you made to the file.
 cp .bashrc .bashrc_backup
 ```
 
-## 2. ENVIRONMENT_VARIABLES
+## 3. ENVIRONMENT_VARIABLES
 
 In Linux, an environment variable is a variable that is set in the shell's environment 
 and can be accessed by processes running in that environment. These variables are 
