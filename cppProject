@@ -20,7 +20,7 @@ build/*
 " > .gitignore
 
 # adding unit tests to project
-cp -r ~/programming/cplusplus/lib/googletest/ .
+cp -r $SCRIPTS_LIB_PATH/googletest/ .
 
 # Creating root CMakeLists.txt file
 if [[ "$1" == '-wx' ]]; then
