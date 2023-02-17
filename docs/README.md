@@ -4,6 +4,7 @@
 Contains documentation on the use of each script.
 
 [HOW_TO.md](https://github.com/PIesPnuema/Scripts/blob/main/docs/HOW_TO.md) Contains a absolute beginner guide to learn about how the scripts are linked and run.
+
 [GETTING_STARTED.md](https://github.com/PIesPnuema/Scripts/blob/main/docs/GETTING_STARTED.md) Contains the quick set up guide to get rolling right away.
 
 ## DEPENDENCIES
