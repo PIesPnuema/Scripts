@@ -1,6 +1,6 @@
 ## SCRIPT REPO  
  
-Sections: [ABOUT](#about) | [GOAL](#goal) | [CONTIBUTION](#contribution) | [DEPENDENCIES](#dependencies) | [DOCS](#docs)
+Sections: [ABOUT](#about) | [GOAL](#goal) | [CONTIBUTION](#contribution) | [DEPENDENCIES](#dependencies) | [DOCS](#docs) | [SCRIPT_DESCRIPTIONS](#script_descriptions)
 
 ## ABOUT
 
@@ -33,8 +33,42 @@ process, as well as enhance the scripts already found in the repo.
 
 ## DEPENDENCIES
 
-- All C++ build system scripts after 17 Feb 2023 will rely on GoogleTest for unit testing.
+- All C++ build system scripts after 17 Feb 2023 will rely on GoogleTest for unit testing. 
 
 ## DOCS
 
 No idea what your doing? [HOW_TO]() doc should help? Want to know more [docs]() is your place! 
+
+## SCRIPT_DESCRIPTIONS
+
+Scripts: [cppProject](#cppproject) | [undoProject](#undoproject)
+
+### cppProject
+
+cppProject is a shell script that will deploy a generalized CMake build system in the current working directory. The names of the executable must be modified to your projects needs. The script will not work if any directories or files of the same name exist inside the current directory as to not overwrite the contents of that directory/ file. 
+
+The build system structure will be as follows: 
+
+```
+├── CMakeLists.txt
+├── README.md
+├── build
+├── googletest
+│   └── ...
+├── include
+│   ├── CMakeLists.txt
+│   └── README.md
+└── src
+    ├── CMakeLists.txt
+    ├── README.md
+    └── main.cpp
+
+```
+***Note: googletest is cloned from [here](https://github.com/google/googletest.git) each time the script is executed.***
+
+### undoProject
+
+***WARNING:*** undoProject will delete any files/ directories that have the same name as the ones intended to be removed. If you run this script in the wrong directory you will may lose all work in those files or directories. ***USE WITH CAUTION.*** 
+
+undoProject will remove all the files/ directories the cppProject script just created. Please read the script to figure out the names of the files and directories that will be deleted. 
+
