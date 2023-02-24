@@ -54,7 +54,7 @@ source ~/.bashrc
 ```
 This will apply the changes that you made to the file.
 
-##### *** BEFORE CHANGING YOUR .bashrc FILE I SUGGEST YOUR MAKE A BACKUP VIA ***
+##### *** BEFORE CHANGING YOUR .bashrc FILE I SUGGEST YOU MAKE A BACKUP VIA ***
 ```bash
 cp .bashrc .bashrc_backup
 ```
