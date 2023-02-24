@@ -9,7 +9,7 @@ helps to automate tasks on the command line.
 
 The repo is not dependent on any particular language. Dependencies may vary 
 for you. Use the shebang line (`#! /bin/bash`) dictating the interpreter 
-used or use the file format if available to figure the language dependencies. 
+used or use the file format if available to figure out the language dependencies. 
 
 ## GOAL
 
