@@ -37,7 +37,7 @@ process, as well as enhance the scripts already found in the repo.
 
 ## DOCS
 
-No idea what your doing? [HOW_TO]() doc should help? Want to know more [docs]() is your place! 
+No idea what your doing? [HOW_TO](https://github.com/PIesPnuema/Scripts/blob/main/docs/HOW_TO.md) doc should help? Want to know more [docs](https://github.com/PIesPnuema/Scripts/tree/main/docs) is your place! 
 
 ## SCRIPT_DESCRIPTIONS
 
