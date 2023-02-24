@@ -26,7 +26,7 @@ Add the following to your .profile or .bashrc file (your choice). Remember to ba
 - This is a global variable the scripts will need to link the scripts inside lib directory.
 To set this varible open the terminal and add the following command to you .bashrc file.
 
-Replace `your/path/to` with the path where the scripts repo lives. EX: `~./.local/bin/Scripts/lib`. 
+Replace `your/path/to` with your path to the scripts repo. EX: `~./.local/bin/Scripts/lib`. 
 ```bash
     # env variable path to dependancy for Scripts repo in .bashrc ----------------
 
@@ -35,9 +35,7 @@ Replace `your/path/to` with the path where the scripts repo lives. EX: `~./.loca
     #-----------------------------------------------------------------------------
 ```
 
-copy the output and use that as the path in .bashrc.
-
-#### 3. Source .bashrc and .profile (if used)
+#### 3. Source .bashrc and .profile 
 ```bash
     #from the home directory
     source .bashrc; source .profile
