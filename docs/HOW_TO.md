@@ -31,17 +31,17 @@ or vim.
 
 Here are some common things that you might include in your .bashrc file:
 
-- Environment variable settings: You can use the export command to set environment 
+- **Environment variable settings:** You can use the export command to set environment 
   variables that will be available to all shell sessions. For example, you might 
   set the PATH variable to include additional directories where executable programs  
   can be found.
     
-- Alias definitions: You can use the alias command to create shortcuts for 
+- **Alias definitions:** You can use the alias command to create shortcuts for 
   commonly-used commands. For example, you might define an alias for ls to 
   include the -l and -h options to display long format output with human-readable 
   file sizes.
 
-- Function definitions: You can define custom shell functions that can be used 
+- **Function definitions:** You can define custom shell functions that can be used 
   in your shell sessions. For example, you might define a function to quickly 
   switch to a project directory and activate a virtual environment.
 
