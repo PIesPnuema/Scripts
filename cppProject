@@ -20,19 +20,9 @@ fi
 
 # Adding git to project
 git init
-echo "
-# ignore all files except the CMakeList.txt file if using UnitTest++ framework.
-# UnitTest++/src/*.cpp
-# UnitTest++/src/*.h
-# UnitTest++/src/*.o
-# UnitTest++/src/cmake-build-debug/*
-# UnitTest++/src/Posix/*
-# UnitTest++/src/.idea
-# UnitTest++/libUnitTest++.a
-# UnitTest++/src/tests/*
-# UnitTest++/src/*.d
-build/*
-" > .gitignore
+
+# adds gitIgnore file with preset ignore files.
+gitIgnore
 
 # Creating root CMakeLists.txt file
 if [[ "$1" == '-wx' ]]; then

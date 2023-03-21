@@ -41,5 +41,9 @@ for isFound in "y" "Y" "Yes" "yes" "YES" ; do
         if [ -e"./googletest" ] ; then
             rm -rf ./googletest/
         fi
+
+        if [ -e" ./LICENSE.md" ] ; then
+            rm -f ./LICENSE.md 
+        fi
     fi
 done
