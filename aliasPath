@@ -7,7 +7,7 @@ if [ $# -eq 0 ]; then
 elif [ $# -eq 1 ]; then
     path=$1
 else
-    echo "Usage: aliasCurrent [<path to current directory>]"
+    echo "Usage: aliasPath [<path to current directory>]"
     exit 1
 fi
 
