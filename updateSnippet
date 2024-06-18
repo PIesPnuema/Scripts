@@ -1,0 +1,8 @@
+#! /bin/bash
+
+# For updating the code snippets to github
+pushd /mnt/c/Users/arnca/AppData/Roaming/Code/User/snippets
+git add *
+git commit -a -m "Updated snippets files"
+git push
+popd
